@@ -1,0 +1,43 @@
+#page-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+#page-container div {
+  margin-right: 10px;
+}
+#page-container div:last-child {
+  margin-right: 0;
+}
+svg {
+  border: 1px solid black;
+}
+#left-container {
+  float: left;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+#right-container {
+  float: left;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+#right-container div {
+  margin-bottom: 10px;
+}
+#right-container div:last-child {
+  margin-bottom: 0;
+}
+#toolbar {
+  padding: 5px;
+}
+.ace_editor {
+  height: 300px;
+  width: 500px;
+}
+#console {
+  border: 1px solid black;
+  height: 150px;
+}

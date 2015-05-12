@@ -1,0 +1,16 @@
+{
+  "name": "AiWorkbench.Web",
+  "version": "0.0.0",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "grunt": "^0.4.5",
+    "gulp": "^3.8.11",
+    "rimraf": "~2.2.0",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-autoprefixer": "^3.0.0"
+  }
+}

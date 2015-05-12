@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>@ViewBag.Title</title>
+	<link href="~/lib/css/bootstrap-css-only/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/src/css/site.css" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", required: false)
+</head>
+<body ng-app="aiwb">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		@RenderBody()
+	</div>
+
+    <script src="~/lib/js/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="~/lib/js/modernizr/modernizr.js" type="text/javascript"></script>
+	<script src="~/lib/js/angular/angular.js" type="text/javascript"></script>
+    <script src="~/lib/js/underscore/underscore.js" type="text/javascript"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

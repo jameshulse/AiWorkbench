@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0-*",
+    "description": "",
+    "authors": [ "" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "AiWorkbench": "1.0.0-*",
+        "ClearScriptDependencies": "0.0.1"
+    },
+
+    "frameworks": {
+        "dnx451": { }
+    }
+} }
