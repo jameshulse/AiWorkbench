@@ -3,10 +3,10 @@
   display: -webkit-flex;
   display: flex;
 }
-#page-container div {
+#page-container > div {
   margin-right: 10px;
 }
-#page-container div:last-child {
+#page-container > div:last-child {
   margin-right: 0;
 }
 svg {
@@ -24,10 +24,10 @@ svg {
   -webkit-flex: 1;
           flex: 1;
 }
-#right-container div {
+#right-container > div {
   margin-bottom: 10px;
 }
-#right-container div:last-child {
+#right-container > div:last-child {
   margin-bottom: 0;
 }
 #toolbar {

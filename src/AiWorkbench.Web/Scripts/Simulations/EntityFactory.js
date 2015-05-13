@@ -2,9 +2,10 @@
     var registrations = [];
 
     this.register = function(name, factoryMethod) {
-        registrations[name] = factorMethod;
+        registrations[name] = factoryMethod;
     };
 
     this.create = function(name, paper, event) {
         return registrations[name](paper, event);
+    };
 };

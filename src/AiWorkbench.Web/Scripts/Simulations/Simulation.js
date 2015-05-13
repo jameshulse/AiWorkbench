@@ -6,6 +6,8 @@
         paper = Raphael(document.getElementById('left-container'), 500, 500),
         entityFactory = new EntityFactory();
 
+    entityFactory.register('Tank',  TankFactory);
+
     this.start = function (script) {
         paper.clear();
 
@@ -48,7 +50,7 @@
                         break;
 
                     case 'entity-created':
-                        var entity = entityFactory(event.EntityName, paper, event);
+                        var entity = entityFactory.create(event.EntityTypeName, paper, event);
 
                         entities.push(entity)
                         break;
@@ -59,7 +61,7 @@
                                 el.animate({
                                     x: event.Position.X,
                                     y: event.Position.Y,
-                                    transform: 'r' + event.Heading.Angle.Degrees
+                                    transform: 'r' + event.Heading.Degrees
                                 });
                             }
                         });
