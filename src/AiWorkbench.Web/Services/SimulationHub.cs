@@ -23,12 +23,12 @@ namespace AiWorkbench.Web.Services
         {
             return base.OnConnected();
         }
-
-        [HubMethodName("run")]
+        
         public IEnumerable<Frame> Run(string simulationType, string playerScript)
         {
             var simulation = _simulationFactory.Create(simulationType, playerScript);
 
+            // TODO: Stream to client as the simulation may never end
             //simulation.Run().ToObservable().Subscribe(f => Clients.Caller.update(f));
 
             return simulation.Run();
