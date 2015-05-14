@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.ClearScript;
+using System.Dynamic;
 using AiWorkbench;
 
 namespace Scenario.Tanks
@@ -55,6 +56,7 @@ namespace Scenario.Tanks
         {
             AddObject<ITankController>("tank", this);
             AddHelper<MathHelper>("Math");
+            AddObject("state", new PropertyBag());
 
             // TODO: Work out how to add console logger...
             SpinSpeedDegrees = 2;

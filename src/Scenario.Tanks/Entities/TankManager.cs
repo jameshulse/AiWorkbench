@@ -16,15 +16,15 @@ namespace Scenario.Tanks
                 // Handle movement
                 if (tank.NextMovement == Tank.Movement.Forward)
                 {
-                    int newX = (int)(tank.MovementSpeed * Math.Cos(tank.Heading.Radians - Math.PI / 2)) + tank.X;
-                    int newY = (int)(tank.MovementSpeed * Math.Sin(tank.Heading.Radians - Math.PI / 2)) + tank.Y;
+                    double newX = (tank.MovementSpeed * Math.Cos(tank.Heading.Radians - Math.PI / 2)) + tank.X;
+                    double newY = (tank.MovementSpeed * Math.Sin(tank.Heading.Radians - Math.PI / 2)) + tank.Y;
 
                     tank.Position = new Position(newX, newY);
                 }
                 else if (tank.NextMovement == Tank.Movement.Backward)
                 {
-                    int newX = (int)(tank.MovementSpeed * Math.Cos(tank.Heading.Radians - Math.PI / 2)) + tank.X;
-                    int newY = (int)(tank.MovementSpeed * Math.Sin(tank.Heading.Radians - Math.PI / 2)) + tank.Y;
+                    double newX = (tank.MovementSpeed * Math.Cos(tank.Heading.Radians - Math.PI / 2)) + tank.X;
+                    double newY = (tank.MovementSpeed * Math.Sin(tank.Heading.Radians - Math.PI / 2)) + tank.Y;
 
                     tank.Position = new Position(newX, newY);
                 }

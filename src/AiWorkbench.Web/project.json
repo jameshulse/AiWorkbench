@@ -1,48 +1,48 @@
 {
-    "webroot": "wwwroot",
-    "version": "1.0.0-*",
-    "description": "",
-    "dependencies": {
-        "Microsoft.AspNet.Diagnostics": "1.0.0-beta5-13033",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta5-13843",
-        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta5-13843",
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta5-11756",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5-12141",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-beta5-11917",
-        "Microsoft.AspNet.Tooling.Razor": "1.0.0-beta5-13353",
-        "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5-12437",
-        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta5-*",
-        "Microsoft.Framework.DependencyInjection": "1.0.0-beta5-11351",
-        "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta5-11351",
-        "Microsoft.Framework.Logging": "1.0.0-beta5-11347",
-        "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta5-11347",
-        "Microsoft.Framework.Logging.Console": "1.0.0-beta5-11347",
-        "AiWorkbench": "",
-        "Scenario.Tanks": "",
-        "Rx-Main": "2.2.5"
-    },
+  "webroot": "wwwroot",
+  "version": "1.0.0-*",
+  "description": "",
+  "dependencies": {
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta5-13033",
+    "Microsoft.AspNet.Mvc": "6.0.0-beta5-13843",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta5-13843",
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta5-11756",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5-12141",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta5-11917",
+    "Microsoft.AspNet.Tooling.Razor": "1.0.0-beta5-13353",
+    "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5-12437",
+    "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta5-*",
+    "Microsoft.Framework.DependencyInjection": "1.0.0-beta5-11351",
+    "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta5-11351",
+    "Microsoft.Framework.Logging": "1.0.0-beta5-11347",
+    "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta5-11347",
+    "Microsoft.Framework.Logging.Console": "1.0.0-beta5-11347",
+    "AiWorkbench": "",
+    "Scenario.Tanks": "",
+    "Rx-Main": "2.2.5"
+  },
 
-    "commands": {
-        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
-    },
+  "commands": {
+    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
+  },
 
-    "frameworks": {
-        "dnx451": { }
-    },
+  "frameworks": {
+    "dnx451": { }
+  },
 
-    "exclude": [
-        "wwwroot",
-        "node_modules",
-        "bower_components"
-    ],
-    "publishExclude": [
-        "node_modules",
-        "bower_components",
-        "**.xproj",
-        "**.user",
-        "**.vspscc"
-    ],
-    "scripts": {
-        "postrestore": [ "npm install", "bower install" ]
-    }
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ],
+  "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+  "scripts": {
+    "postrestore": [ "npm install", "bower install" ]
+  }
 }

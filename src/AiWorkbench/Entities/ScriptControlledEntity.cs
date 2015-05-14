@@ -22,14 +22,24 @@ namespace AiWorkbench.Entities
             _engine.AddRestrictedHostObject<T>(name, instance);
         }
 
+        protected void AddObject(string name, object instance)
+        {
+            _engine.AddHostObject(name, instance);
+        }
+
         protected void AddHelper<THelper>(string nameOverride = "")
 		{
 			_engine.AddHostType(String.IsNullOrEmpty(nameOverride) ? typeof(THelper).Name : nameOverride, typeof(THelper));
 		}
 
+        protected void RunScript(string script)
+        {
+            _engine.Execute(_updateScript);
+        }
+
 		public override void Update()
 		{
-			_engine.Execute(_updateScript);
+            RunScript(_updateScript);
         }
 	}
 }

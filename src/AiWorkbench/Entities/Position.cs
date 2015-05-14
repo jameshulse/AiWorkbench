@@ -4,15 +4,15 @@ namespace AiWorkbench.Entities
 {
     public struct Position
     {
-		public Position(int x, int y)
+		public Position(double x, double y)
 		{
 			X = x;
 			Y = y;
 		}
 
-		public int X { get; set; }
+		public double X { get; set; }
 
-		public int Y { get; set; }
+		public double Y { get; set; }
 
         public static bool operator ==(Position a, Position b)
         {
@@ -34,7 +34,7 @@ namespace AiWorkbench.Entities
 
         public override int GetHashCode()
         {
-            return X * 17 + Y * 13;
+            return (int)(X * 17 + Y * 13);
         }
     }
 }

@@ -24,9 +24,9 @@ namespace AiWorkbench.Entities
 
 		public Guid Id { get; private set; }
 
-		public int X { get { return Position.X; } }
+		public double X { get { return Position.X; } }
 
-		public int Y { get { return Position.Y; } }
+		public double Y { get { return Position.Y; } }
 
 		public Position Position { get; set; }
 
