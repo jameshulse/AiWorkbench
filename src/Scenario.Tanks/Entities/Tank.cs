@@ -31,7 +31,7 @@ namespace Scenario.Tanks
         public Movement NextMovement { get; private set; }
         public bool IsShooting { get; private set; }
 
-        public double SpinSpeed { get; set; }
+        public double SpinSpeedDegrees { get; set; }
         public double MovementSpeed { get; set; }
         public int Health { get; internal set; }
 
@@ -57,7 +57,7 @@ namespace Scenario.Tanks
             AddHelper<MathHelper>("Math");
 
             // TODO: Work out how to add console logger...
-
+            SpinSpeedDegrees = 2;
             MovementSpeed = 1;
             Health = 100;
         }

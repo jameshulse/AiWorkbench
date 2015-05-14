@@ -7,7 +7,7 @@ namespace AiWorkbench.Entities
 {
     public struct Angle
     {
-        public double Degrees { get { return RadianToDegree(Radians); } }
+        public double Degrees { get { return AngleHelpers.RadiansToDegree(Radians); } }
         public double Radians { get; private set; }
 
         private Angle(double radians)
@@ -22,17 +22,7 @@ namespace AiWorkbench.Entities
 
         public static Angle FromDegrees(double angle)
         {
-            return new Angle(DegreesToRadians(angle % 360));
-        }
-
-        private static double DegreesToRadians(double degrees)
-        {
-            return Math.PI * degrees / 180.0;
-        }
-
-        private static double RadianToDegree(double radians)
-        {
-            return radians * (180.0 / Math.PI);
+            return new Angle(AngleHelpers.DegreesToRadians(angle % 360));
         }
 
         public static Angle operator +(Angle instance, double radians)
@@ -53,6 +43,19 @@ namespace AiWorkbench.Entities
         public static bool operator !=(Angle a, Angle b)
         {
             return a.Degrees != b.Degrees;
+        }
+    }
+
+    public static class AngleHelpers
+    {
+        public static double DegreesToRadians(double degrees)
+        {
+            return Math.PI * degrees / 180.0;
+        }
+
+        public static double RadiansToDegree(double radians)
+        {
+            return radians * (180.0 / Math.PI);
         }
     }
 }

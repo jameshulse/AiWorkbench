@@ -29,7 +29,7 @@ namespace Scenario.Tanks
                     tank.Position = new Position(newX, newY);
                 }
                 else if (tank.NextMovement == Tank.Movement.TurnLeft)
-                    tank.Heading -= tank.SpinSpeed;
+                    tank.Heading -= AngleHelpers.DegreesToRadians(tank.SpinSpeedDegrees);
                 
                 tank.PrepareForNextFrame();
 
