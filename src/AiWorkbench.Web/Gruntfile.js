@@ -23,7 +23,8 @@ module.exports = function (grunt) {
 		less: {
 			all: {
 				options: {
-					paths: ['Styles']
+					paths: ['Styles'],
+                    sourceMap: true
 				},
 				files: [{
 					expand: true,

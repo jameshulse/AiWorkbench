@@ -8,7 +8,7 @@ namespace AiWorkbench.Web.Services
 {
     public static class SimulationTypes
     {
-        public const string Tank = "tank";
+        public const string TankBattle = "tank";
     }
 
     public class SimulationFactory
@@ -17,7 +17,7 @@ namespace AiWorkbench.Web.Services
         {
             switch(simulationType)
             {
-                case SimulationTypes.Tank:
+                case SimulationTypes.TankBattle:
                     return CreateTankSimulation(playerScript);
 
                 default:

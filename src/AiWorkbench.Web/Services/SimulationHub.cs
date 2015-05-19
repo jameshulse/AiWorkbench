@@ -1,5 +1,4 @@
-﻿using AiWorkbench.Client;
-using Microsoft.AspNet.SignalR;
+﻿using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using System;
 using System.Collections.Generic;
@@ -12,26 +11,22 @@ namespace AiWorkbench.Web.Services
     [HubName("simulation")]
     public class SimulationHub : Hub
     {
-        private SimulationFactory _simulationFactory;
+        private static SimulationFactory _simulationFactory;
+        private static Dictionary<string, Simulation> _currentSimulations = new Dictionary<string, Simulation>();
 
-        public SimulationHub()
+        static SimulationHub()
         {
             _simulationFactory = new SimulationFactory();
         }
-
-        public override Task OnConnected()
-        {
-            return base.OnConnected();
-        }
         
-        public IEnumerable<Frame> Run(string simulationType, string playerScript)
+        public void Run(string simulationType, string playerScript)
         {
             var simulation = _simulationFactory.Create(simulationType, playerScript);
 
-            // TODO: Stream to client as the simulation may never end
-            //simulation.Run().ToObservable().Subscribe(f => Clients.Caller.update(f));
-
-            return simulation.Run();
+            simulation.Run()
+                .ToObservable()
+                .Buffer(TimeSpan.FromSeconds(1), 10)
+                .Subscribe(frames =>  this.Clients.Caller.Update(frames));
         }
     }
 }

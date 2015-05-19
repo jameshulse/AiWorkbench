@@ -38,7 +38,7 @@ namespace AiWorkbench
             for(int i = 0; i < 50; i++) // TODO: Some sort of end condition...
                 yield return Step();
 
-            //yield return FinalFrame();
+            yield return FinalFrame();
         }
 
         internal Frame InitialFrame()

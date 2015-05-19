@@ -4,6 +4,7 @@ using Microsoft.AspNet.Diagnostics;
 using Microsoft.Framework.Logging;
 using Microsoft.AspNet.Hosting;
 using System;
+using AiWorkbench.Web.Services;
 
 namespace AiWorkbench.Web
 {
